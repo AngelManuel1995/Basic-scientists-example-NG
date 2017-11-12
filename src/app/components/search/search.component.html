@@ -1,0 +1,31 @@
+<h2>Buscando: {{termino}}</h2>
+
+<div *ngIf="scientist.length == 0" class="alert alert-info" role="alert">
+    No hay coinsidencias con <strong>{{ termino }}</strong>
+</div>
+
+<div class="row animated fadeIn fast">
+
+    <div class="col-md-3" *ngFor="let scientist1 of scientist; let i = index">
+
+            
+            <div class="card colorear-hover-{{colorClasses[i % 6]}} colorear-hover">
+                <div class="card-body">
+                    <h4 class="card-title">{{ scientist1.name }}</h4>
+                    <p class="card-text text-justify">{{ scientist1.bio | slice:0:110}}</p>
+                    <img class="circular colorear-borde-circular-{{colorClasses[i % 6]}}" width="250" height="250" [src]="scientist1.img" [alt]="scientist1.name"/>
+                    <br><br>
+                    <a class="btn {{colorClasses[i % 6]}} btn-block text-white" [routerLink]="['/scientist', i]"> Ver más ...</a>
+                    <!--<button type="button" class="btn btn-outline-primary btn-block">
+                        Ver más...
+                    </button>-->
+                    <!-- <a class="btn btn-outline-primary btn-block" [routerLink]="['/heroe', i]">Ver más ... </a>-->
+                </div>
+            </div>
+
+    </div>
+        
+</div>
+                
+
+<br/> <br/>

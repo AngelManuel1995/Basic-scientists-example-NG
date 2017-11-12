@@ -1,0 +1,23 @@
+<div class="container-fluid">
+    <h1>{{title}}</h1>
+    <div class="row animated fadeIn fast">
+    
+        <div class="col-md-4" *ngFor="let quote of quotes; let i = index">
+            <div class="card">
+                <div class="card-header {{colorClasses[i % 6]}} text-white" >
+                    <strong>{{quote.author}}</strong>
+                </div>
+                <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                        <p>"{{quote.texto}}"</p>
+                        <footer class="blockquote-footer"><cite title="Source Title">{{quote.author}}</cite></footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+</div>
+
+
+

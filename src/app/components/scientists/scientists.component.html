@@ -1,0 +1,35 @@
+<div class="container-fluid">
+
+    <h2>scientists</h2>
+    <div class="row animated fadeIn fast">
+    
+        <div class="col-md-3" *ngFor="let scientist1 of scientists; let i = index">
+    
+                
+                <div class="card colorear-hover-{{colorClasses[i % 6]}} colorear-hover">
+                    <div class="card-body">
+                        <h4 class="card-title">{{ scientist1.name | slice:0:25 }}</h4>
+                        <p class="card-text text-justify">{{ scientist1.bio | slice:0:100}} <span *ngIf="scientist1.bio.length > 100"> ...</span> </p> 
+                        <img class="circular colorear-borde-circular-{{colorClasses[i % 6]}}" width="250" height="250" [src]="scientist1.img" [alt]="scientist1.name"/>
+                        <br><br>
+                        <a class="btn {{colorClasses[i % 6]}} btn-block text-white" [routerLink]="['/scientist', i]"> Ver más ...</a>
+                        <!--<button type="button" class="btn btn-outline-primary btn-block">
+                            Ver más...
+                        </button>-->
+                        <!-- <a class="btn btn-outline-primary btn-block" [routerLink]="['/heroe', i]">Ver más ... </a>-->
+                    </div>
+                </div>
+    
+        </div>
+            
+    </div>
+
+</div>
+
+                
+
+<br/> <br/>
+
+ 
+
+
