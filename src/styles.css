@@ -105,3 +105,10 @@
   color: white;
   text-align: justify;
 }
+.full-height{
+  height: 620px;
+  padding-top: 100px;
+}
+.full-width{
+  width: 100%;
+}
