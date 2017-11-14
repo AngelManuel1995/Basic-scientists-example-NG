@@ -21,6 +21,8 @@ import { QuoteComponent }      from "./components/quote/quote.component";
 import { ScientistComponent }  from "./components/scientist/scientist.component";
 import { SearchComponent }     from "./components/search/search.component";
 
+import { DomseguroPipe }           from "./pipes/domseguro.pipe";
+
 import { AppComponent }        from './app.component';
 
 
@@ -35,7 +37,8 @@ import { AppComponent }        from './app.component';
     ScientistsComponent,
     QuoteComponent,
     ScientistComponent,
-    SearchComponent
+    SearchComponent,
+    DomseguroPipe
   ],
   imports: [
     BrowserModule,

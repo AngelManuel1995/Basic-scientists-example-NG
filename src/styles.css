@@ -112,3 +112,31 @@
 .full-width{
   width: 100%;
 }
+.arrow{
+  margin-left: -33px;
+}
+.c-pointer{
+  cursor: pointer;
+}
+.top-10{
+  margin-top: 10px;
+}
+
+.change-color>img:hover{
+  transition:0.5s;
+  width:120px; 
+  height:120px;
+}
+.change-color>img:not(:hover){
+  transition:1s;
+  width:100px; 
+  height:100px;
+}
+.change-color:hover{
+  transition:1s;
+  color: #17a2b8;
+}
+.change-color:not(:hover){
+  color: black;  
+  transition:0.5s;
+}

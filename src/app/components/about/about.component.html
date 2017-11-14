@@ -1,15 +1,15 @@
 <div class="container animated fadeIn fast" style="margin-top:20px; padding-left:0px;">
     <div class="row d-flex align-items-center">
         <div class="col-md-1">
-            <a href=""><img src="http://iesoleana.edu.gva.es/joomla30/websalumnos/luis/imagenes/flecha.png" width="100" alt=""></a>
+            <img (click)="previousVideo()" class="c-pointer" src="http://iesoleana.edu.gva.es/joomla30/websalumnos/luis/imagenes/flecha.png" width="100" alt="">
         </div>
-        <div class="col-md-10">
+        <div class="col-md-10 animated fadeIn fast">
             <div class="embed-responsive embed-responsive-16by9">
-                <iframe width="560" height="315" class="embed-responsive-item" src="https://www.youtube.com/embed/LBEq1rhRbC4" allowfullscreen></iframe>
+                <iframe width="560" height="315" class="embed-responsive-item" [src]=" playList[i] | domseguro:'https://www.youtube.com/embed/'" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
-        <div class="col-md-1">
-           <a href=""><img src="http://adalimas.com/new2016/wp-content/uploads/2016/06/flecha-naranja_2.png" width="100" alt=""></a>
+        <div class="col-md-1 arrow" >
+           <img (click)="nextVideo()" class="c-pointer" src="http://adalimas.com/new2016/wp-content/uploads/2016/06/flecha-naranja_2.png" width="100" alt="">
         </div>
     </div>
     <div class="row">
